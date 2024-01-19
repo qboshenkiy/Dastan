@@ -1,0 +1,7 @@
+<!-- surveys/templates/surveys/survey_list.html -->
+<h2>Список анкет</h2>
+<ul>
+    {% for survey in surveys %}
+        <li><a href="{% url 'survey_detail' survey.id %}">{{ survey.question }}</a></li>
+    {% endfor %}
+</ul>
